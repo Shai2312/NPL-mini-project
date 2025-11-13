@@ -6,6 +6,7 @@ import datetime, hashlib, json, re, shutil
 
 MODEL_ID = "dicta-il/dictabert-tiny-joint"
 
+maxNumOfWords = 5
 _tokenizer = None
 _model = None
 menu = [
@@ -14,24 +15,48 @@ menu = [
     ("run analysis", lambda: runAnalysis()),
     ("Exit", None) 
 ]
+InputBibalRelativePath = "InputFiles/bibal"
+InputMishnaRelativePath = "InputFiles/hazal/mishna"
+InputRambamRelativePath = "InputFiles/hazal/rambam"
+InputModernRelativePath = "InputFiles/modern"
+
+JsonFilesBibalRelativePath = "JsonFiles/bibal"
+JsonFilesMishnaRelativePath = "JsonFiles/hazal/mishna"
+JsonFilesRambamRelativePath = "JsonFiles/hazal/rambam"
+JsonFilesModernRelativePath = "JsonFiles/modern"
 
 def runAnalysis():
     """
     Run the analysis for all files in the InputFiles and save the output to the Json files
     """
-    print("running anlysis") 
-
-
     sample_text = "ד."
     result = analyzeText(sample_text)
-    # Print to terminal (diagnostics)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
-    # Save to JsonFiles/Test
     out_path = save_json(result, base_dir="JsonFiles/Test")
     print(f"Saved JSON to: {out_path}")
 
+def sliceText(text: str) -> List[str]:
+    splitSectences = re.split(r'([.!?])\s*', text)
+    sentences = [splitSectences[2*i].strip() + splitSectences[2*i+1] for i in range(0, len(splitSectences)//2)]
+    if len(splitSectences) % 2 != 0:
+        sentences.append(splitSectences[-1]) 
+    output = []
+    currChunck = ""
+    currChunckSize = 0
+    for sentence in sentences:
+        words = sentence.split(" ")
+        if currChunckSize + len(words) <= maxNumOfWords :
+            currChunck += " " + sentence
+            currChunckSize += len(words)
+        else:
+            output.append(currChunck)
+            currChunck = sentence
+            currChunckSize = len(words)
+    
+    if currChunck != "":
+        output.append(currChunck)
 
-
+    return output
+    
 
 def _load_model():
     """
@@ -133,8 +158,29 @@ def menuRun():
                 if func is not None:
                     func()
 
+def buildDirectoryPath():
+    inputBibalPath = Path(InputBibalRelativePath)
+    inputBibalPath.mkdir(parents=True, exist_ok=True)
+    inputMishnalPath = Path(InputMishnaRelativePath)
+    inputMishnalPath.mkdir(parents=True, exist_ok=True)
+    inputRambamPath = Path(InputRambamRelativePath)
+    inputRambamPath.mkdir(parents=True, exist_ok=True)
+    inputmodernPath = Path(InputModernRelativePath)
+    inputmodernPath.mkdir(parents=True, exist_ok=True)
+
+    jsonFilesBibalPath = Path(JsonFilesBibalRelativePath)
+    jsonFilesBibalPath.mkdir(parents=True, exist_ok=True)
+    jsonFilesMishnalPath = Path(JsonFilesMishnaRelativePath)
+    jsonFilesMishnalPath.mkdir(parents=True, exist_ok=True)
+    jsonFilesRambamPath = Path(JsonFilesRambamRelativePath)
+    jsonFilesRambamPath.mkdir(parents=True, exist_ok=True)
+    jsonFilesmodernPath = Path(JsonFilesModernRelativePath)
+    jsonFilesmodernPath.mkdir(parents=True, exist_ok=True)
+
 def main():
-    menuRun()
+    # menuRun()
+    buildDirectoryPath()
+    print(sliceText("hello! this. is? a! test. for find. out if. it workd. shopud be max. 5 char chunks."))
 
 if __name__ == "__main__":
     main()
