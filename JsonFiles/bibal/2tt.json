@@ -1,0 +1,199 @@
+{
+  "text": "מקווה ממש שיעבוד ומבקש שתחזיק איתי אצבעות! ",
+  "tokens": [
+    {
+      "token": "מקווה",
+      "offsets": {
+        "start": 0,
+        "end": 5
+      },
+      "syntax": {
+        "word": "מקווה",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "!"
+      },
+      "morph": {
+        "token": "מקווה",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ממש",
+      "offsets": {
+        "start": 6,
+        "end": 9
+      },
+      "syntax": {
+        "word": "ממש",
+        "dep_head_idx": 0,
+        "dep_func": "advmod",
+        "dep_head": "מקווה"
+      },
+      "morph": {
+        "token": "ממש",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "שיעבוד",
+      "offsets": {
+        "start": 10,
+        "end": 16
+      },
+      "syntax": {
+        "word": "שיעבוד",
+        "dep_head_idx": 0,
+        "dep_func": "ccomp",
+        "dep_head": "מקווה"
+      },
+      "morph": {
+        "token": "שיעבוד",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Fut"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ומבקש",
+      "offsets": {
+        "start": 17,
+        "end": 22
+      },
+      "syntax": {
+        "word": "ומבקש",
+        "dep_head_idx": 0,
+        "dep_func": "conj",
+        "dep_head": "מקווה"
+      },
+      "morph": {
+        "token": "ומבקש",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Pres"
+        },
+        "prefixes": [
+          "CCONJ"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "שתחזיק",
+      "offsets": {
+        "start": 23,
+        "end": 29
+      },
+      "syntax": {
+        "word": "שתחזיק",
+        "dep_head_idx": 0,
+        "dep_func": "ccomp",
+        "dep_head": "מקווה"
+      },
+      "morph": {
+        "token": "שתחזיק",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Fut"
+        },
+        "prefixes": [
+          "SCONJ"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "איתי",
+      "offsets": {
+        "start": 30,
+        "end": 34
+      },
+      "syntax": {
+        "word": "איתי",
+        "dep_head_idx": 4,
+        "dep_func": "obl",
+        "dep_head": "שתחזיק"
+      },
+      "morph": {
+        "token": "איתי",
+        "pos": "ADP",
+        "feats": {},
+        "prefixes": [],
+        "suffix": "PRON",
+        "suffix_feats": {
+          "Gender": "Fem,Masc",
+          "Number": "Sing",
+          "Person": "1"
+        }
+      }
+    },
+    {
+      "token": "אצבעות",
+      "offsets": {
+        "start": 35,
+        "end": 41
+      },
+      "syntax": {
+        "word": "אצבעות",
+        "dep_head_idx": 4,
+        "dep_func": "obj",
+        "dep_head": "שתחזיק"
+      },
+      "morph": {
+        "token": "אצבעות",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Plur"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "!",
+      "offsets": {
+        "start": 41,
+        "end": 42
+      },
+      "syntax": {
+        "word": "!",
+        "dep_head_idx": 0,
+        "dep_func": "punct",
+        "dep_head": "מקווה"
+      },
+      "morph": {
+        "token": "!",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 0,
+  "ner_entities": []
+}

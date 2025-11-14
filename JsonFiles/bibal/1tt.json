@@ -1,0 +1,308 @@
+{
+  "text": "אני מנסה לייבא את הקובץ הזה לתקייה כלשהי ולראות אם הפענוח עובד.",
+  "tokens": [
+    {
+      "token": "אני",
+      "offsets": {
+        "start": 0,
+        "end": 3
+      },
+      "syntax": {
+        "word": "אני",
+        "dep_head_idx": 1,
+        "dep_func": "nsubj",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": "אני",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "מנסה",
+      "offsets": {
+        "start": 4,
+        "end": 8
+      },
+      "syntax": {
+        "word": "מנסה",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "."
+      },
+      "morph": {
+        "token": "מנסה",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לייבא",
+      "offsets": {
+        "start": 9,
+        "end": 14
+      },
+      "syntax": {
+        "word": "לייבא",
+        "dep_head_idx": 1,
+        "dep_func": "xcomp",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": "לייבא",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "את",
+      "offsets": {
+        "start": 15,
+        "end": 17
+      },
+      "syntax": {
+        "word": "את",
+        "dep_head_idx": 4,
+        "dep_func": "case:acc",
+        "dep_head": "הקובץ"
+      },
+      "morph": {
+        "token": "את",
+        "pos": "ADP",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הקובץ",
+      "offsets": {
+        "start": 18,
+        "end": 23
+      },
+      "syntax": {
+        "word": "הקובץ",
+        "dep_head_idx": 2,
+        "dep_func": "obj",
+        "dep_head": "לייבא"
+      },
+      "morph": {
+        "token": "הקובץ",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הזה",
+      "offsets": {
+        "start": 24,
+        "end": 27
+      },
+      "syntax": {
+        "word": "הזה",
+        "dep_head_idx": 4,
+        "dep_func": "det",
+        "dep_head": "הקובץ"
+      },
+      "morph": {
+        "token": "הזה",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לתקייה",
+      "offsets": {
+        "start": 28,
+        "end": 34
+      },
+      "syntax": {
+        "word": "לתקייה",
+        "dep_head_idx": 2,
+        "dep_func": "obl",
+        "dep_head": "לייבא"
+      },
+      "morph": {
+        "token": "לתקייה",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "כלשהי",
+      "offsets": {
+        "start": 35,
+        "end": 40
+      },
+      "syntax": {
+        "word": "כלשהי",
+        "dep_head_idx": 6,
+        "dep_func": "det",
+        "dep_head": "לתקייה"
+      },
+      "morph": {
+        "token": "כלשהי",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing",
+          "Person": "3"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ולראות",
+      "offsets": {
+        "start": 41,
+        "end": 47
+      },
+      "syntax": {
+        "word": "ולראות",
+        "dep_head_idx": 2,
+        "dep_func": "conj",
+        "dep_head": "לייבא"
+      },
+      "morph": {
+        "token": "ולראות",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [
+          "CCONJ"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אם",
+      "offsets": {
+        "start": 48,
+        "end": 50
+      },
+      "syntax": {
+        "word": "אם",
+        "dep_head_idx": 11,
+        "dep_func": "mark",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "אם",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הפענוח",
+      "offsets": {
+        "start": 51,
+        "end": 57
+      },
+      "syntax": {
+        "word": "הפענוח",
+        "dep_head_idx": 11,
+        "dep_func": "nsubj",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "הפענוח",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עובד",
+      "offsets": {
+        "start": 58,
+        "end": 62
+      },
+      "syntax": {
+        "word": "עובד",
+        "dep_head_idx": 8,
+        "dep_func": "advcl",
+        "dep_head": "ולראות"
+      },
+      "morph": {
+        "token": "עובד",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 62,
+        "end": 63
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 1,
+        "dep_func": "punct",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 1,
+  "ner_entities": []
+}

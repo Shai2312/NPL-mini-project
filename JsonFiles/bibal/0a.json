@@ -1,0 +1,271 @@
+{
+  "text": " הנה אני מנסה לעשות משפט ארוך כדי לראות איך זה עובד.",
+  "tokens": [
+    {
+      "token": "הנה",
+      "offsets": {
+        "start": 1,
+        "end": 4
+      },
+      "syntax": {
+        "word": "הנה",
+        "dep_head_idx": 2,
+        "dep_func": "advmod",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": "הנה",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אני",
+      "offsets": {
+        "start": 5,
+        "end": 8
+      },
+      "syntax": {
+        "word": "אני",
+        "dep_head_idx": 2,
+        "dep_func": "nsubj",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": "אני",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "מנסה",
+      "offsets": {
+        "start": 9,
+        "end": 13
+      },
+      "syntax": {
+        "word": "מנסה",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "."
+      },
+      "morph": {
+        "token": "מנסה",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לעשות",
+      "offsets": {
+        "start": 14,
+        "end": 19
+      },
+      "syntax": {
+        "word": "לעשות",
+        "dep_head_idx": 2,
+        "dep_func": "xcomp",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": "לעשות",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "משפט",
+      "offsets": {
+        "start": 20,
+        "end": 24
+      },
+      "syntax": {
+        "word": "משפט",
+        "dep_head_idx": 3,
+        "dep_func": "obj",
+        "dep_head": "לעשות"
+      },
+      "morph": {
+        "token": "משפט",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ארוך",
+      "offsets": {
+        "start": 25,
+        "end": 29
+      },
+      "syntax": {
+        "word": "ארוך",
+        "dep_head_idx": 4,
+        "dep_func": "amod",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": "ארוך",
+        "pos": "ADJ",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "כדי",
+      "offsets": {
+        "start": 30,
+        "end": 33
+      },
+      "syntax": {
+        "word": "כדי",
+        "dep_head_idx": 7,
+        "dep_func": "case",
+        "dep_head": "לראות"
+      },
+      "morph": {
+        "token": "כדי",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לראות",
+      "offsets": {
+        "start": 34,
+        "end": 39
+      },
+      "syntax": {
+        "word": "לראות",
+        "dep_head_idx": 3,
+        "dep_func": "advcl",
+        "dep_head": "לעשות"
+      },
+      "morph": {
+        "token": "לראות",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "איך",
+      "offsets": {
+        "start": 40,
+        "end": 43
+      },
+      "syntax": {
+        "word": "איך",
+        "dep_head_idx": 7,
+        "dep_func": "obj",
+        "dep_head": "לראות"
+      },
+      "morph": {
+        "token": "איך",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "זה",
+      "offsets": {
+        "start": 44,
+        "end": 46
+      },
+      "syntax": {
+        "word": "זה",
+        "dep_head_idx": 10,
+        "dep_func": "nsubj",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "זה",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עובד",
+      "offsets": {
+        "start": 47,
+        "end": 51
+      },
+      "syntax": {
+        "word": "עובד",
+        "dep_head_idx": 8,
+        "dep_func": "acl:relcl",
+        "dep_head": "איך"
+      },
+      "morph": {
+        "token": "עובד",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 51,
+        "end": 52
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 2,
+        "dep_func": "punct",
+        "dep_head": "מנסה"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 2,
+  "ner_entities": []
+}

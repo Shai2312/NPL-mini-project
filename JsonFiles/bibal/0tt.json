@@ -1,0 +1,278 @@
+{
+  "text": " אני כותב פה משפט ארוך כדי לבדוק אם עובד לי הפרוייקט.",
+  "tokens": [
+    {
+      "token": "אני",
+      "offsets": {
+        "start": 1,
+        "end": 4
+      },
+      "syntax": {
+        "word": "אני",
+        "dep_head_idx": 1,
+        "dep_func": "nsubj",
+        "dep_head": "כותב"
+      },
+      "morph": {
+        "token": "אני",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "כותב",
+      "offsets": {
+        "start": 5,
+        "end": 9
+      },
+      "syntax": {
+        "word": "כותב",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "."
+      },
+      "morph": {
+        "token": "כותב",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "פה",
+      "offsets": {
+        "start": 10,
+        "end": 12
+      },
+      "syntax": {
+        "word": "פה",
+        "dep_head_idx": 1,
+        "dep_func": "advmod",
+        "dep_head": "כותב"
+      },
+      "morph": {
+        "token": "פה",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "משפט",
+      "offsets": {
+        "start": 13,
+        "end": 17
+      },
+      "syntax": {
+        "word": "משפט",
+        "dep_head_idx": 1,
+        "dep_func": "obj",
+        "dep_head": "כותב"
+      },
+      "morph": {
+        "token": "משפט",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ארוך",
+      "offsets": {
+        "start": 18,
+        "end": 22
+      },
+      "syntax": {
+        "word": "ארוך",
+        "dep_head_idx": 3,
+        "dep_func": "amod",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": "ארוך",
+        "pos": "ADJ",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "כדי",
+      "offsets": {
+        "start": 23,
+        "end": 26
+      },
+      "syntax": {
+        "word": "כדי",
+        "dep_head_idx": 6,
+        "dep_func": "case",
+        "dep_head": "לבדוק"
+      },
+      "morph": {
+        "token": "כדי",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לבדוק",
+      "offsets": {
+        "start": 27,
+        "end": 32
+      },
+      "syntax": {
+        "word": "לבדוק",
+        "dep_head_idx": 1,
+        "dep_func": "advcl",
+        "dep_head": "כותב"
+      },
+      "morph": {
+        "token": "לבדוק",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אם",
+      "offsets": {
+        "start": 33,
+        "end": 35
+      },
+      "syntax": {
+        "word": "אם",
+        "dep_head_idx": 8,
+        "dep_func": "mark",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "אם",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עובד",
+      "offsets": {
+        "start": 36,
+        "end": 40
+      },
+      "syntax": {
+        "word": "עובד",
+        "dep_head_idx": 6,
+        "dep_func": "advcl",
+        "dep_head": "לבדוק"
+      },
+      "morph": {
+        "token": "עובד",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Pres"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לי",
+      "offsets": {
+        "start": 41,
+        "end": 43
+      },
+      "syntax": {
+        "word": "לי",
+        "dep_head_idx": 8,
+        "dep_func": "obl",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "לי",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "1"
+        },
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הפרוייקט",
+      "offsets": {
+        "start": 44,
+        "end": 52
+      },
+      "syntax": {
+        "word": "הפרוייקט",
+        "dep_head_idx": 8,
+        "dep_func": "nsubj",
+        "dep_head": "עובד"
+      },
+      "morph": {
+        "token": "הפרוייקט",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 52,
+        "end": 53
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 1,
+        "dep_func": "punct",
+        "dep_head": "כותב"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 1,
+  "ner_entities": []
+}

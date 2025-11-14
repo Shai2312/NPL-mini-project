@@ -1,0 +1,264 @@
+{
+  "text": " זה משפט בעברית שיש בו בדיוק עשר מילים עבור הדוגמה.",
+  "tokens": [
+    {
+      "token": "זה",
+      "offsets": {
+        "start": 1,
+        "end": 3
+      },
+      "syntax": {
+        "word": "זה",
+        "dep_head_idx": 1,
+        "dep_func": "nsubj",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": "זה",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "משפט",
+      "offsets": {
+        "start": 4,
+        "end": 8
+      },
+      "syntax": {
+        "word": "משפט",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "."
+      },
+      "morph": {
+        "token": "משפט",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "בעברית",
+      "offsets": {
+        "start": 9,
+        "end": 15
+      },
+      "syntax": {
+        "word": "בעברית",
+        "dep_head_idx": 1,
+        "dep_func": "nmod",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": "בעברית",
+        "pos": "PROPN",
+        "feats": {},
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "שיש",
+      "offsets": {
+        "start": 16,
+        "end": 19
+      },
+      "syntax": {
+        "word": "שיש",
+        "dep_head_idx": 1,
+        "dep_func": "acl:relcl",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": "שיש",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [
+          "SCONJ"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "בו",
+      "offsets": {
+        "start": 20,
+        "end": 22
+      },
+      "syntax": {
+        "word": "בו",
+        "dep_head_idx": 3,
+        "dep_func": "obl",
+        "dep_head": "שיש"
+      },
+      "morph": {
+        "token": "בו",
+        "pos": "PRON",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3"
+        },
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "בדיוק",
+      "offsets": {
+        "start": 23,
+        "end": 28
+      },
+      "syntax": {
+        "word": "בדיוק",
+        "dep_head_idx": 7,
+        "dep_func": "advmod",
+        "dep_head": "מילים"
+      },
+      "morph": {
+        "token": "בדיוק",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עשר",
+      "offsets": {
+        "start": 29,
+        "end": 32
+      },
+      "syntax": {
+        "word": "עשר",
+        "dep_head_idx": 7,
+        "dep_func": "nummod",
+        "dep_head": "מילים"
+      },
+      "morph": {
+        "token": "עשר",
+        "pos": "NUM",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "מילים",
+      "offsets": {
+        "start": 33,
+        "end": 38
+      },
+      "syntax": {
+        "word": "מילים",
+        "dep_head_idx": 3,
+        "dep_func": "nsubj",
+        "dep_head": "שיש"
+      },
+      "morph": {
+        "token": "מילים",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Plur"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עבור",
+      "offsets": {
+        "start": 39,
+        "end": 43
+      },
+      "syntax": {
+        "word": "עבור",
+        "dep_head_idx": 9,
+        "dep_func": "case",
+        "dep_head": "הדוגמה"
+      },
+      "morph": {
+        "token": "עבור",
+        "pos": "ADP",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הדוגמה",
+      "offsets": {
+        "start": 44,
+        "end": 50
+      },
+      "syntax": {
+        "word": "הדוגמה",
+        "dep_head_idx": 3,
+        "dep_func": "obl",
+        "dep_head": "שיש"
+      },
+      "morph": {
+        "token": "הדוגמה",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 50,
+        "end": 51
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 1,
+        "dep_func": "punct",
+        "dep_head": "משפט"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 1,
+  "ner_entities": [
+    {
+      "phrase": "בעברית",
+      "label": "ANG",
+      "start": 9,
+      "end": 15,
+      "token_start": 2,
+      "token_end": 2
+    }
+  ]
+}

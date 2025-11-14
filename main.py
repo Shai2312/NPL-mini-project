@@ -3,10 +3,11 @@ from transformers import AutoTokenizer, AutoModel
 from pathlib import Path
 from typing import List, Dict, Any
 import datetime, hashlib, json, re, shutil
+import xml.etree.ElementTree as ET
 
 MODEL_ID = "dicta-il/dictabert-tiny-joint"
 
-maxNumOfWords = 5
+maxNumOfWords = 12
 _tokenizer = None
 _model = None
 menu = [
@@ -25,14 +26,48 @@ JsonFilesMishnaRelativePath = "JsonFiles/hazal/mishna"
 JsonFilesRambamRelativePath = "JsonFiles/hazal/rambam"
 JsonFilesModernRelativePath = "JsonFiles/modern"
 
+
+def readXmlText(path: Path) -> str:
+    root = ET.parse(path).getroot()
+    parts = []
+    for text in root.itertext():
+        cleaned = text.strip()
+        if cleaned:
+            parts.append(cleaned)
+
+    return " ".join(parts)
+
+
 def runAnalysis():
-    """
-    Run the analysis for all files in the InputFiles and save the output to the Json files
-    """
-    sample_text = "ד."
-    result = analyzeText(sample_text)
-    out_path = save_json(result, base_dir="JsonFiles/Test")
-    print(f"Saved JSON to: {out_path}")
+    iterateFolder(InputBibalRelativePath, JsonFilesBibalRelativePath)
+    iterateFolder(InputMishnaRelativePath, JsonFilesMishnaRelativePath)
+    iterateFolder(InputRambamRelativePath, JsonFilesRambamRelativePath)
+
+    modernFolderPath = Path(InputModernRelativePath)
+    modernFolderPathJson = Path(JsonFilesModernRelativePath)
+    for file in modernFolderPath.iterdir():
+        if file.is_dir():
+            filePath = Path(file)
+            inputPath = modernFolderPath / filePath.name
+            outputPath =modernFolderPathJson / filePath.name
+            iterateFolder(inputPath, outputPath)
+            
+
+
+def iterateFolder(inputFolder, outputFolder):
+    inputFolderPath = Path(inputFolder)
+    for file in inputFolderPath.iterdir():
+        if file.is_file():
+            if file.suffix.lower() == ".xml":
+                sampleText = readXmlText(file)
+            else:
+                sampleText = file.read_text(encoding="utf-8")
+            textInSize = sliceText(sampleText)
+            for index, text in enumerate(textInSize):
+                result = analyzeText(text)
+
+                save_json(result, outputFolder, str(index) + file.name)
+
 
 def sliceText(text: str) -> List[str]:
     splitSectences = re.split(r'([.!?])\s*', text)
@@ -56,12 +91,9 @@ def sliceText(text: str) -> List[str]:
         output.append(currChunck)
 
     return output
-    
+
 
 def _load_model():
-    """
-    loads the tokenizer and model. Does it once at the first use. the loading code itself was given to us
-    """
     global _tokenizer, _model
     if _tokenizer is None or _model is None:
         _tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -80,11 +112,6 @@ def _load_model():
 
 
 def analyzeText(text: str, output_style: str = "json") -> Dict[str, Any]:
-    """
-    Runs DictaBERT-tiny-joint on a single Hebrew text
-    Return:
-        a JSON-able dict.
-    """
     tokenizer, model = _load_model()
     result = model.predict([text], tokenizer, output_style=output_style)
     # model.predict returns a list (one per input string)
@@ -92,51 +119,31 @@ def analyzeText(text: str, output_style: str = "json") -> Dict[str, Any]:
         return result[0] 
     return result
 
-def save_json(obj: Any, base_dir: str = "JsonFiles/Test", filename: str | None = None) -> str:
-    """
-    Saves JSON (UTF-8, pretty).
-    Return:
-        the filepath.
-    """
+def save_json(obj: Any, base_dir: str, filename: str):
     base = Path(base_dir)
-    base.mkdir(parents=True, exist_ok=True)   # auto-create folders, ignores if already exist
-
-    if filename is None:
-        # Unique, readable filenames (timestamp + short content hash)
-        ts = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-        h  = hashlib.sha1(json.dumps(obj, ensure_ascii=False).encode("utf-8")).hexdigest()[:8]
-        filename = f"analysis-{ts}-{h}.json"
-
-    path = base / filename
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+    base.mkdir(parents=True, exist_ok=True)
+    jsonName = filename.split(".")[0] + ".json"
+    path = base / jsonName
+    with path.open("w", encoding="utf-8") as file:
+        json.dump(obj, file, ensure_ascii=False, indent=2)
         # ^ ensure_ascii=False keeps Hebrew readable; indent=2 is nicer for diagnostics
-    return str(path)
 
 
-def inpufFile(filePath: str, folderPath: str) -> int:
-    """
-    Reads a new file abd adds it to the corresponding folder according to its type.
-    return:
-        1 if succeeded
-        2 if filePath does not exist
-        3 if filePath is not a file
-        4 if the copied file does not exist
-    """
+def inpufFile(filePath: str, folderPath: str):
     sourceFile = Path(filePath)
     if not sourceFile.exists():
-        return 2
-    if not sourceFile.is_file():
-        return 3
+        print(f"No file found with name {filePath}")
+    else:
+        if not sourceFile.is_file():
+            print(f"Type Error - {filePath}  is not a file.")
 
-    fileDestonationFolder = Path(folderPath)
-    fileDestonationFolder.mkdir(parents=True, exist_ok=True)
-    outputFile = fileDestonationFolder / sourceFile.name
-    shutil.copy2(sourceFile, outputFile)
-    
-    if not outputFile.exists():
-        return 4
-    return 1
+        fileDestonationFolder = Path(folderPath)
+        fileDestonationFolder.mkdir(parents=True, exist_ok=True)
+        outputFile = fileDestonationFolder / sourceFile.name
+        shutil.copy2(sourceFile, outputFile)
+        
+        if not outputFile.exists():
+            print(f"Failed to save the file to {folderPath}. Please try again.")
 
 def menuRun():
     finish = False
@@ -178,9 +185,8 @@ def buildDirectoryPath():
     jsonFilesmodernPath.mkdir(parents=True, exist_ok=True)
 
 def main():
-    # menuRun()
     buildDirectoryPath()
-    print(sliceText("hello! this. is? a! test. for find. out if. it workd. shopud be max. 5 char chunks."))
+    menuRun()
 
 if __name__ == "__main__":
     main()
