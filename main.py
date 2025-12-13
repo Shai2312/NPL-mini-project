@@ -2,8 +2,10 @@ from __future__ import annotations # for future proof typing - easier and handle
 from transformers import AutoTokenizer, AutoModel
 from pathlib import Path
 from typing import List, Dict, Any
-import datetime, hashlib, json, re, shutil
+import json, re, shutil
 import xml.etree.ElementTree as ET
+from collections import Counter
+import matplotlib.pyplot as plt
 
 MODEL_ID = "dicta-il/dictabert-tiny-joint"
 
@@ -16,6 +18,10 @@ menu = [
     ("run analysis", lambda: runAnalysis()),
     ("Exit", None) 
 ]
+wordsFor4_2 = []
+wordsFor4_3 = []
+
+
 InputBibalRelativePath = "InputFiles/bibal"
 InputMishnaRelativePath = "InputFiles/hazal/mishna"
 InputRambamRelativePath = "InputFiles/hazal/rambam"
@@ -53,7 +59,6 @@ def runAnalysis():
             iterateFolder(inputPath, outputPath)
             
 
-
 def iterateFolder(inputFolder, outputFolder):
     inputFolderPath = Path(inputFolder)
     for file in inputFolderPath.iterdir():
@@ -65,7 +70,6 @@ def iterateFolder(inputFolder, outputFolder):
             textInSize = sliceText(sampleText)
             for index, text in enumerate(textInSize):
                 result = analyzeText(text)
-
                 save_json(result, outputFolder, str(index) + file.name)
 
 
@@ -144,6 +148,32 @@ def inpufFile(filePath: str, folderPath: str):
         
         if not outputFile.exists():
             print(f"Failed to save the file to {folderPath}. Please try again.")
+
+def countWords(folder_path:str) -> dict[str, int]:
+    folder = Path(folder_path)
+    wordCounter = Counter()
+
+    for filePath in folder.glob("*.json"):
+        with open(filePath, encoding="utf-8") as file:
+            data = json.load(file)
+        
+        for token in data.get("tokens", []):
+            word = token.get("token")
+            if word is not None:
+                wordCounter[word] += 1
+    return dict(wordCounter)
+
+def stat4_1(wordDict: dict[str, int]) -> list:
+    return ["Words Frequency", "Words", "Frequency", wordDict]
+
+def stat4_2(wordDict: dict[str, int]) -> list:
+    sub_dict = {k: wordDict[k] for k in wordsFor4_2 if k in wordDict}
+    return ["Edit Doron Special Words", "Words", "Frequency", sub_dict]
+
+def stat4_3(wordDict: dict[str, int]) -> list:
+    sub_dict = {k: wordDict[k] for k in wordsFor4_3 if k in wordDict}
+    return ["Edit Doron Special Words", "Words", "Frequency", sub_dict]
+
 
 def menuRun():
     finish = False
