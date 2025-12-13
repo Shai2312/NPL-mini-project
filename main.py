@@ -5,7 +5,6 @@ from typing import List, Dict, Any
 import json, re, shutil
 import xml.etree.ElementTree as ET
 from collections import Counter
-import matplotlib.pyplot as plt
 
 MODEL_ID = "dicta-il/dictabert-tiny-joint"
 
