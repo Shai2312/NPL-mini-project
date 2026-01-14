@@ -1,0 +1,791 @@
+{
+  "text": " כאשר הושקה המערכת החדשה, המשתמשים דיווחו כי הביצועים השתפרו, אך חלקם טענו שהממשק עדיין מסורבל. אם החברה תבחר להשקיע בשיפור חוויית המשתמש, ייתכן אשר שהמוצר יהפוך לנפוץ יותר בשוק. ",
+  "tokens": [
+    {
+      "token": "כאשר",
+      "offsets": {
+        "start": 1,
+        "end": 5
+      },
+      "syntax": {
+        "word": "כאשר",
+        "dep_head_idx": 1,
+        "dep_func": "mark",
+        "dep_head": "הושקה"
+      },
+      "morph": {
+        "token": "כאשר",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הושקה",
+      "offsets": {
+        "start": 6,
+        "end": 11
+      },
+      "syntax": {
+        "word": "הושקה",
+        "dep_head_idx": 6,
+        "dep_func": "ccomp",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": "הושקה",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Past"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "המערכת",
+      "offsets": {
+        "start": 12,
+        "end": 18
+      },
+      "syntax": {
+        "word": "המערכת",
+        "dep_head_idx": 1,
+        "dep_func": "nsubj",
+        "dep_head": "הושקה"
+      },
+      "morph": {
+        "token": "המערכת",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "החדשה",
+      "offsets": {
+        "start": 19,
+        "end": 24
+      },
+      "syntax": {
+        "word": "החדשה",
+        "dep_head_idx": 2,
+        "dep_func": "amod",
+        "dep_head": "המערכת"
+      },
+      "morph": {
+        "token": "החדשה",
+        "pos": "ADJ",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": ",",
+      "offsets": {
+        "start": 24,
+        "end": 25
+      },
+      "syntax": {
+        "word": ",",
+        "dep_head_idx": 1,
+        "dep_func": "punct",
+        "dep_head": "הושקה"
+      },
+      "morph": {
+        "token": ",",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "המשתמשים",
+      "offsets": {
+        "start": 26,
+        "end": 34
+      },
+      "syntax": {
+        "word": "המשתמשים",
+        "dep_head_idx": 6,
+        "dep_func": "nsubj",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": "המשתמשים",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Plur"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "דיווחו",
+      "offsets": {
+        "start": 35,
+        "end": 41
+      },
+      "syntax": {
+        "word": "דיווחו",
+        "dep_head_idx": -1,
+        "dep_func": "root",
+        "dep_head": "."
+      },
+      "morph": {
+        "token": "דיווחו",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem,Masc",
+          "Number": "Plur",
+          "Person": "3",
+          "Tense": "Past"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "כי",
+      "offsets": {
+        "start": 42,
+        "end": 44
+      },
+      "syntax": {
+        "word": "כי",
+        "dep_head_idx": 9,
+        "dep_func": "mark",
+        "dep_head": "השתפרו"
+      },
+      "morph": {
+        "token": "כי",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "הביצועים",
+      "offsets": {
+        "start": 45,
+        "end": 53
+      },
+      "syntax": {
+        "word": "הביצועים",
+        "dep_head_idx": 9,
+        "dep_func": "nsubj",
+        "dep_head": "השתפרו"
+      },
+      "morph": {
+        "token": "הביצועים",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Plur"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "השתפרו",
+      "offsets": {
+        "start": 54,
+        "end": 60
+      },
+      "syntax": {
+        "word": "השתפרו",
+        "dep_head_idx": 6,
+        "dep_func": "ccomp",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": "השתפרו",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem,Masc",
+          "Number": "Plur",
+          "Person": "3",
+          "Tense": "Past"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": ",",
+      "offsets": {
+        "start": 60,
+        "end": 61
+      },
+      "syntax": {
+        "word": ",",
+        "dep_head_idx": 13,
+        "dep_func": "punct",
+        "dep_head": "טענו"
+      },
+      "morph": {
+        "token": ",",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אך",
+      "offsets": {
+        "start": 62,
+        "end": 64
+      },
+      "syntax": {
+        "word": "אך",
+        "dep_head_idx": 13,
+        "dep_func": "cc",
+        "dep_head": "טענו"
+      },
+      "morph": {
+        "token": "אך",
+        "pos": "CCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "חלקם",
+      "offsets": {
+        "start": 65,
+        "end": 69
+      },
+      "syntax": {
+        "word": "חלקם",
+        "dep_head_idx": 13,
+        "dep_func": "nsubj",
+        "dep_head": "טענו"
+      },
+      "morph": {
+        "token": "חלקם",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": "PRON",
+        "suffix_feats": {
+          "Gender": "Masc",
+          "Number": "Plur",
+          "Person": "3"
+        }
+      }
+    },
+    {
+      "token": "טענו",
+      "offsets": {
+        "start": 70,
+        "end": 74
+      },
+      "syntax": {
+        "word": "טענו",
+        "dep_head_idx": 6,
+        "dep_func": "conj",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": "טענו",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem,Masc",
+          "Number": "Plur",
+          "Person": "3",
+          "Tense": "Past"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "שהממשק",
+      "offsets": {
+        "start": 75,
+        "end": 81
+      },
+      "syntax": {
+        "word": "שהממשק",
+        "dep_head_idx": 16,
+        "dep_func": "nsubj",
+        "dep_head": "מסורבל"
+      },
+      "morph": {
+        "token": "שהממשק",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "SCONJ",
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "עדיין",
+      "offsets": {
+        "start": 82,
+        "end": 87
+      },
+      "syntax": {
+        "word": "עדיין",
+        "dep_head_idx": 16,
+        "dep_func": "advmod",
+        "dep_head": "מסורבל"
+      },
+      "morph": {
+        "token": "עדיין",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "מסורבל",
+      "offsets": {
+        "start": 88,
+        "end": 94
+      },
+      "syntax": {
+        "word": "מסורבל",
+        "dep_head_idx": 13,
+        "dep_func": "ccomp",
+        "dep_head": "טענו"
+      },
+      "morph": {
+        "token": "מסורבל",
+        "pos": "ADJ",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 94,
+        "end": 95
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 6,
+        "dep_func": "punct",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אם",
+      "offsets": {
+        "start": 96,
+        "end": 98
+      },
+      "syntax": {
+        "word": "אם",
+        "dep_head_idx": 20,
+        "dep_func": "mark",
+        "dep_head": "תבחר"
+      },
+      "morph": {
+        "token": "אם",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "החברה",
+      "offsets": {
+        "start": 99,
+        "end": 104
+      },
+      "syntax": {
+        "word": "החברה",
+        "dep_head_idx": 20,
+        "dep_func": "nsubj",
+        "dep_head": "תבחר"
+      },
+      "morph": {
+        "token": "החברה",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "תבחר",
+      "offsets": {
+        "start": 105,
+        "end": 109
+      },
+      "syntax": {
+        "word": "תבחר",
+        "dep_head_idx": 26,
+        "dep_func": "advcl",
+        "dep_head": "ייתכן"
+      },
+      "morph": {
+        "token": "תבחר",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Fut"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "להשקיע",
+      "offsets": {
+        "start": 110,
+        "end": 116
+      },
+      "syntax": {
+        "word": "להשקיע",
+        "dep_head_idx": 20,
+        "dep_func": "xcomp",
+        "dep_head": "תבחר"
+      },
+      "morph": {
+        "token": "להשקיע",
+        "pos": "VERB",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "בשיפור",
+      "offsets": {
+        "start": 117,
+        "end": 123
+      },
+      "syntax": {
+        "word": "בשיפור",
+        "dep_head_idx": 21,
+        "dep_func": "obl",
+        "dep_head": "להשקיע"
+      },
+      "morph": {
+        "token": "בשיפור",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "חוויית",
+      "offsets": {
+        "start": 124,
+        "end": 130
+      },
+      "syntax": {
+        "word": "חוויית",
+        "dep_head_idx": 22,
+        "dep_func": "compound:smixut",
+        "dep_head": "בשיפור"
+      },
+      "morph": {
+        "token": "חוויית",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Fem",
+          "Number": "Sing"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "המשתמש",
+      "offsets": {
+        "start": 131,
+        "end": 137
+      },
+      "syntax": {
+        "word": "המשתמש",
+        "dep_head_idx": 23,
+        "dep_func": "compound:smixut",
+        "dep_head": "חוויית"
+      },
+      "morph": {
+        "token": "המשתמש",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": ",",
+      "offsets": {
+        "start": 137,
+        "end": 138
+      },
+      "syntax": {
+        "word": ",",
+        "dep_head_idx": 20,
+        "dep_func": "punct",
+        "dep_head": "תבחר"
+      },
+      "morph": {
+        "token": ",",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "ייתכן",
+      "offsets": {
+        "start": 139,
+        "end": 144
+      },
+      "syntax": {
+        "word": "ייתכן",
+        "dep_head_idx": 6,
+        "dep_func": "ccomp",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": "ייתכן",
+        "pos": "AUX",
+        "feats": {
+          "Person": "3"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "אשר",
+      "offsets": {
+        "start": 145,
+        "end": 148
+      },
+      "syntax": {
+        "word": "אשר",
+        "dep_head_idx": 29,
+        "dep_func": "mark",
+        "dep_head": "יהפוך"
+      },
+      "morph": {
+        "token": "אשר",
+        "pos": "SCONJ",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "שהמוצר",
+      "offsets": {
+        "start": 149,
+        "end": 155
+      },
+      "syntax": {
+        "word": "שהמוצר",
+        "dep_head_idx": 29,
+        "dep_func": "nsubj",
+        "dep_head": "יהפוך"
+      },
+      "morph": {
+        "token": "שהמוצר",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "SCONJ",
+          "DET"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "יהפוך",
+      "offsets": {
+        "start": 156,
+        "end": 161
+      },
+      "syntax": {
+        "word": "יהפוך",
+        "dep_head_idx": 26,
+        "dep_func": "advcl",
+        "dep_head": "ייתכן"
+      },
+      "morph": {
+        "token": "יהפוך",
+        "pos": "VERB",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing",
+          "Person": "3",
+          "Tense": "Fut"
+        },
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "לנפוץ",
+      "offsets": {
+        "start": 162,
+        "end": 167
+      },
+      "syntax": {
+        "word": "לנפוץ",
+        "dep_head_idx": 29,
+        "dep_func": "obl",
+        "dep_head": "יהפוך"
+      },
+      "morph": {
+        "token": "לנפוץ",
+        "pos": "ADJ",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": "יותר",
+      "offsets": {
+        "start": 168,
+        "end": 172
+      },
+      "syntax": {
+        "word": "יותר",
+        "dep_head_idx": 30,
+        "dep_func": "advmod",
+        "dep_head": "לנפוץ"
+      },
+      "morph": {
+        "token": "יותר",
+        "pos": "ADV",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    },
+    {
+      "token": "בשוק",
+      "offsets": {
+        "start": 173,
+        "end": 177
+      },
+      "syntax": {
+        "word": "בשוק",
+        "dep_head_idx": 30,
+        "dep_func": "obl",
+        "dep_head": "לנפוץ"
+      },
+      "morph": {
+        "token": "בשוק",
+        "pos": "NOUN",
+        "feats": {
+          "Gender": "Masc",
+          "Number": "Sing"
+        },
+        "prefixes": [
+          "DET",
+          "ADP"
+        ],
+        "suffix": false
+      }
+    },
+    {
+      "token": ".",
+      "offsets": {
+        "start": 177,
+        "end": 178
+      },
+      "syntax": {
+        "word": ".",
+        "dep_head_idx": 6,
+        "dep_func": "punct",
+        "dep_head": "דיווחו"
+      },
+      "morph": {
+        "token": ".",
+        "pos": "PUNCT",
+        "feats": {},
+        "prefixes": [],
+        "suffix": false
+      }
+    }
+  ],
+  "root_idx": 6,
+  "ner_entities": []
+}
