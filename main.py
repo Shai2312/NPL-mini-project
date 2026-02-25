@@ -445,7 +445,6 @@ def save_tower_graph(title, x_label, y_label, values_list: list[tuple[str, dict]
     all_keys = set().union(*(d.keys() for _, d in values_list))
     def sort_key(k):
         s = str(k)
-        # Extract the first number in the label for proper sorting (e.g., "5" from "5-9")
         nums = re.findall(r'\d+', s)
         if nums:
             return int(nums[0])
@@ -454,19 +453,27 @@ def save_tower_graph(title, x_label, y_label, values_list: list[tuple[str, dict]
     if not keys: return
     x_pos = np.arange(len(keys))
     width = 0.8 / max(len(values_list), 1)
-    plt.figure(figsize=(14, 8))
+    plt.figure(figsize=(15, 8))
     for i, (name, d) in enumerate(values_list):
         plt.bar(x_pos + i * width, [d.get(k, 0) for k in keys], width, label=name)
     centers = x_pos + width * (len(values_list) - 1) / 2
-    clean_labels = [re.sub(r'[$_^{}\\]', '', str(k)) for k in keys]
-    rotation = 90 if len(keys) > 10 else 45
-    plt.xticks(centers, clean_labels, rotation=rotation, ha="right")
-    plt.title(title); plt.xlabel(x_label); plt.ylabel(y_label)
-    plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+    # Matplotlib prints Hebrew backwards. This reverses the string if it contains Hebrew letters.
+    def fix_hebrew(text):
+        return text[::-1] if any('\u05d0' <= c <= '\u05ea' for c in text) else text
+    clean_labels = [fix_hebrew(re.sub(r'[$_^{}\\]', '', str(k))) for k in keys]
+    rotation = 90 if len(keys) > 25 else 45
+    plt.xticks(centers, clean_labels, rotation=rotation, ha="right", fontsize=12) # X-axis values
+    plt.yticks(fontsize=12) # Y-axis values
+    plt.title(title, fontsize=18, fontweight='bold')
+    plt.xlabel(x_label, fontsize=14, fontweight='bold')
+    plt.ylabel(y_label, fontsize=14, fontweight='bold')
+    plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0, fontsize=12)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    try: plt.tight_layout()
-    except: plt.subplots_adjust(bottom=0.25, right=0.85)
+    try: 
+        plt.tight_layout()
+    except: 
+        plt.subplots_adjust(bottom=0.30, right=0.85) # Increased bottom margin to prevent label cutoff   
     plt.savefig(out / f"{title}.{ext}", dpi=300, bbox_inches="tight")
     plt.close()
 
@@ -516,7 +523,7 @@ def printStatistics():
     doron_dicts = [Counter() for _ in range(4)]
     total_words_counts = [0 for _ in range(4)]
     paths = [
-        ("Bibal", InputBibalRelativePath, JsonFilesBibalRelativePath), 
+        ("Bible", InputBibalRelativePath, JsonFilesBibalRelativePath), 
         ("Mishna", InputMishnaRelativePath, JsonFilesMishnaRelativePath),
         ("Rambam", InputRambamRelativePath, JsonFilesRambamRelativePath), 
         ("Modern", InputModernRelativePath, JsonFilesModernRelativePath)
