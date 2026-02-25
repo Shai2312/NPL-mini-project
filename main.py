@@ -132,7 +132,7 @@ def sliceText(text: str, allow_colon: bool = False) -> List[str]:
 def iterate_folder_slice_text(sampleText, func_vars, file):
     outputFolder = func_vars[0]
     # Check if this file is from the Bible folder
-    # "bibal" is in your variable InputBibalRelativePath
+    # "bible" is in your variable InputBibalRelativePath
     is_biblical = "bibal" in file.parts or "bibal" in str(file.parent).lower()
     # Pass the flag
     sentences = sliceText(sampleText, allow_colon=is_biblical)
@@ -432,7 +432,7 @@ def stat_8d(possDict: dict[str, int]) -> dict:
 
 def print_7b_stats():
     paths = [JsonFilesBibalRelativePath, JsonFilesMishnaRelativePath, JsonFilesRambamRelativePath, JsonFilesModernRelativePath]
-    names = ["Bibal", "Mishna", "Rambam", "Modern"]
+    names = ["Bible", "Mishna", "Rambam", "Modern"]
     all_stats = [stat_7b(p) for p in paths] # List of [Gender, Number, Person, Tense] per period
     features = ["Gender", "Number", "Person", "Tense"]
     for i, feature in enumerate(features):
@@ -582,7 +582,7 @@ def printStatistics():
     print("\n\n" + "#"*70)
     print(" "*20 + "COMPREHENSIVE DISTANCE ANALYSIS")
     print("#"*70)
-    names = [p[0] for p in paths] # ["Bibal", "Mishna", "Rambam", "Modern"]
+    names = [p[0] for p in paths] # ["Bible", "Mishna", "Rambam", "Modern"]
     # Stat 1: Words Frequency (Top 50)
     stat1_dicts = [stat_1({k: v for k, v in word_dicts[i].items() if k in top_50_keys}) for i in range(4)]
     generate_similarity_report("Stat 1: Words Frequency (Top 50)", stat1_dicts, names)
