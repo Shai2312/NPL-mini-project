@@ -49,14 +49,16 @@ python -m venv .venv
 # 2) Install dependencies
 pip install -r requirements.txt
 
-# 3) Run the example
+# 3) Add the input files into the relevant sub-folders 
+
+# 4) Run the example
 python main.py
 #Menu Options:
     # 1.Load File: Copy text/XML files into the target directories.
     # 2.Run Analysis: Process raw texts through DictaBERT and generate base JSON tokens.
-    # 3.Print Statistics: Extract linguistic features, plot Matplotlib bar charts, generate the comprehensive Similarity Distance CSV, and run the ML Classifier on Modern Hebrew datasets.
+    # 3.Print Statistics: Extract linguistic features, plot Matplotlib bar charts, generate the comprehensive Similarity Distance CSV, and run the ML Classifier on Modern Hebrew datasets, can be activated only after a file was analyzed.
 
-# 4) Run the classifier
+# 5) Run the classifier
 python classifier.py
 #Menu Option:
     # 1.Run modern analysis- Automatically processes all Modern Hebrew datasets through the trained Classifier. It outputs a table showing the percentage of "Rabbinic" vs. "Biblical" alignment for each genre across all 5 linguistic lenses.
